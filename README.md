@@ -10,7 +10,17 @@ The minimum prerequisites to run this sample are:
 
 > Note: Documentation coming soon....
 
-You need at least two active conversations
+You need at least two active conversations from different "users" (a conversation in two different channels for example):
 
 * In one of the conversation, send the "register" message to register that user as available agent. 
 * In the other conversation, chat with the bot as usual. Sending a phrase containing the word "leg" when replying to the symptoms, will trigger the question to the user asking if he wants to talk with a real person. 
+
+
+### TODO Items
+
+* Extract agent storage out of MessageRouter to allow extensibility
+* Enable "Waiting mode" for users when there is no Agent available
+* Add ability to unregister agents
+* Create 2 scorables with logic from MessageRouter:
+ * One should register/unregister agents
+ * The other one should route messages
